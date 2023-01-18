@@ -13,14 +13,13 @@ x_{i j}= \begin{cases}1 & \text { the path goes from city } i \text { to city } 
 
 Take $c_{i j}>0$ to be the distance from city $i$ to city $j$. Then TSP can be written as the following integer linear programming problem:
 
-```math
 
-\begin{equation}
-\begin{array}{ll}
-\min \sum_{i=1}^n \sum_{j \neq i, j=1}^n c_{i j} x_{i j}: & \\
-\sum_{i=1, i \neq j}^n x_{i j}=1 & j=1, \ldots, n ; \\
-\sum_{j=1, j \neq i}^n x_{i j}=1 & i=1, \ldots, n ; \\
-\sum_{i \in Q} \sum_{j \neq i, j \in Q} x_{i j} \leq|Q|-1 & \forall Q \subsetneq\{1, \ldots, n\},|Q| \geq 2
-\end{array}
-\end{equation}
+$$\min \sum_{i=1}^n \sum_{j \neq i, j=1}^n  c_{i j} x_{i j}:$$
+
+$$\sum_{i=1, i \neq j}^n x_{i j}=1   ~  ~ ~  ~  ~ ~  j=1, \ldots, n ;$$
+
+$$\sum_{j=1, j \neq i}^n x_{i j}=1  ~  ~ ~  ~  ~ ~ i=1, \ldots, n$$
+
+```math
+\sum_{i \in Q} \sum_{j \neq i, j \in Q} x_{i j} \leq|Q|-1  ~  ~ ~  ~  ~ ~ \forall Q \subsetneq\{1, \ldots, n\},|Q| \geq 2
 ```
